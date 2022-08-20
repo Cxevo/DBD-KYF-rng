@@ -20,7 +20,7 @@ status = Window['Status']
 while True:
     event, values = Window.read()
     if event == 'Start':
-        players = ['Brandon', 'Issac', 'Trenton', 'Steven']
+        players = ['NAME', 'NAME', 'NAME', 'NAME']
 
         random_killer = random.choice(players)
 
