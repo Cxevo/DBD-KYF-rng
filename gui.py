@@ -4,35 +4,41 @@ import PySimpleGUI as sg
 sg.theme('DarkAmber')
 
 layout = [
-    [sg.Text('Window normal', size=(30, 1), key='Status')],
-    [sg.Text("Press start too randomly select a killer for your lobby")],
+    [sg.Text("Press Player too randomly select the person who will play killer")],
+    [sg.Text("Press Killer for a random killer")],
     [sg.Image('Kicon.png')], 
-    [sg.Button('Start',)],
-    [sg.Text('Output', key='Output')],
+    [sg.Button('Player', key='-START-'), sg.Button('Killer', key='-START2-')],
+    [sg.Text('Output', key='-OUTPUT-')],
+    [sg.Text('Output', key='-OUTPUT2-')]
 ]
 
 # create the window
-Window = sg.Window("Dead By daylight kyf rng", layout, resizable=True, finalize=True,)
-Window.bind('<Configure>', "Configure")
-status = Window['Status']
+Window = sg.Window("Dead By daylight kyf rng", layout, margins=(30,15),resizable=False, finalize=True,)
 
 # create an event loop
 while True:
     event, values = Window.read()
-    if event == 'Start':
-        players = ['NAME', 'NAME', 'NAME', 'NAME']
 
-        random_killer = random.choice(players)
+# event for the player selection
+    if event == '-START-':
+        players = ['NAME HERE', 'NAME HERE', 'NAME HERE', 'NAME HERE']
 
-        Window['Output'].update(random_killer)
+        random_player = random.choice(players)
 
-    # events for resize and closing the window
+        Window['-OUTPUT-'].update(random_player)
+
+# event for the random killer
+    if event == '-START2-':
+        f = open("killers.txt", 'r')
+        killers = f.readlines()
+        f.close()
+        
+        last = 27
+        rnd = random.randint(0, last)
+
+        Window['-OUTPUT2-'].update(killers[rnd])
+        
+# event closing the window
     if event == sg.WINDOW_CLOSED:
-        break
-    elif event == 'Configure':
-        if Window.TKroot.state() == 'zoomed':
-            status.update(value='Window zoomed and maximized !')
-        else:
-            status.update(value='Window normal')
-
+            break
 Window.close()
