@@ -1,3 +1,6 @@
+REQUIRES python or python3 to be installed
+an IDE to run the code (VSCode) (Visual Studios)
+
 this is a very ugly program that lets you randomly choose a player too play killer for your kyf lobbies.
 it also has a button to randomly select the killer you will play as
 
