@@ -7,3 +7,5 @@ it also has a button to randomly select the killer you will play as
 im lazy so replace line 23 players with the names of people in your lobby 
 
 ![alt text](https://cdn.discordapp.com/attachments/481988269521764352/1011006609541054464/unknown.png)
+
+in the future i might add input for the player names and make it into an .exe
