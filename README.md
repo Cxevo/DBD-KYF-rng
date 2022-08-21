@@ -1,5 +1,6 @@
-this is a very ugly program that lets you randomly choose a killer for your kyf lobbies.
+this is a very ugly program that lets you randomly choose a player too play killer for your kyf lobbies.
+it also has a button to randomly select the killer you will play as
 
 im lazy so replace line 23 players with the names of people in your lobby 
 
-![alt text](https://cdn.discordapp.com/attachments/489571604271988737/1010634480245022830/unknown.png)
+![alt text](https://cdn.discordapp.com/attachments/481988269521764352/1011006609541054464/unknown.png)
